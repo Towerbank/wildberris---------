@@ -5,6 +5,10 @@ const cart = function () {
   const goodsContainer = document.querySelector('.long-goods-list');
   const cartTable = document.querySelector('.cart-table__goods');
   const modalForm = document.querySelector('.modal-form');
+  const totalPrise = document.querySelector('.card-table__total');
+  console.log(totalPrise);
+
+
 
   const deleteCartItem = (id) => {
     const cart = JSON.parse(localStorage.getItem('cart'))
@@ -97,6 +101,7 @@ const cart = function () {
         }
       })
     })
+
   }
 
   const sendForm = () => {
@@ -107,8 +112,8 @@ const cart = function () {
       method: 'Post',
       body: JSON.stringify({
         cart: cartArray,
-        name: '',
-        phone: ''
+        name: 'ff',
+        phone: '111'
       })
     }).then(() => {
       cart.style.display = '';
