@@ -58,9 +58,12 @@ const getGoods = () => {
     renderGoods(JSON.parse(localStorage.getItem('goods')))
   }
 
-  goodsAll.addEventListener('click', () => {
-    getData()
-  })
+  if (goodsAll) {
+    goodsAll.addEventListener('click', () => {
 
+      getData()
+    })
+
+  }
 }
 getGoods()
